@@ -1,0 +1,54 @@
+{
+ "title": "Ashborn",
+ "subtitle": "Voice of the Dragon",
+ "chapters": [
+  {
+   "n": 1,
+   "id": "ch01",
+   "title": "They Told Me Your Family Was Dead",
+   "pages": 22
+  },
+  {
+   "n": 2,
+   "id": "ch02",
+   "title": "The Hunted",
+   "pages": 19
+  },
+  {
+   "n": 3,
+   "id": "ch03",
+   "title": "The Steward's Box",
+   "pages": 18
+  },
+  {
+   "n": 4,
+   "id": "ch04",
+   "title": "The Raven's Price",
+   "pages": 18
+  },
+  {
+   "n": 5,
+   "id": "ch05",
+   "title": "Feather",
+   "pages": 18
+  },
+  {
+   "n": 6,
+   "id": "ch06",
+   "title": "Ashborn",
+   "pages": 18
+  },
+  {
+   "n": 7,
+   "id": "ch07",
+   "title": "Debts",
+   "pages": 18
+  },
+  {
+   "n": 8,
+   "id": "ch08",
+   "title": "The Riven March",
+   "pages": 18
+  }
+ ]
+}

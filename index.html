@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ashborn: Voice of the Dragon</title>
+<meta name="description" content="Ashborn: Voice of the Dragon. A seinen fantasy manga. Read it free, chapter by chapter.">
+<meta property="og:title" content="Ashborn: Voice of the Dragon">
+<meta property="og:description" content="A seinen fantasy manga. Read it free, chapter by chapter.">
+<meta property="og:image" content="img/cover-title.webp">
+<meta name="theme-color" content="#0d0e10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d0e10'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23d6a84e'%3E%C3%86%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#0d0e10;--bg2:#15171a;--line:rgba(255,255,255,.1);--ink:#ece8df;--dim:#9a958b;--gold:#d6a84e;--ember:#d6784e;
+  --display:"Shippori Mincho B1","Yu Mincho",Georgia,serif;
+  --body:"Zen Kaku Gothic New","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.hide{display:none!important}
+
+/* ---------- home ---------- */
+.hero{position:relative;min-height:min(92vh,980px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/cover.webp) center 22%/cover no-repeat;z-index:-2;filter:saturate(.85)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,14,16,.15) 0%,rgba(13,14,16,.35) 45%,rgba(13,14,16,.92) 82%,var(--bg) 100%)}
+.hero-in{max-width:1100px;width:100%;margin:0 auto;padding:0 24px 56px}
+.kick{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,11vw,132px);line-height:.92;letter-spacing:.02em;margin:0;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero .sub{font-family:var(--display);font-weight:600;font-size:clamp(16px,2.4vw,24px);letter-spacing:.42em;text-transform:uppercase;color:#d9cfbd;margin:14px 0 22px}
+.hero p.blurb{max-width:560px;color:#cfc9bd;margin:0 0 28px;font-size:17px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(20,21,24,.7);backdrop-filter:blur(6px);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;transition:transform .15s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.28)}
+.btn.primary{background:var(--gold);color:#16120a;border-color:var(--gold)}
+.btn.primary:hover{background:#e3b75c}
+.btn small{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;opacity:.8}
+main.home{max-width:1100px;margin:0 auto;padding:24px 24px 80px}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px;margin:24px 0 24px}
+.sechead h2{font-family:var(--display);font-weight:800;font-size:28px;margin:0}
+.sechead span{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--dim)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:22px}
+.chap{display:block;text-decoration:none;group:1}
+.chap .th{position:relative;aspect-ratio:2/3;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+.chap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .3s}
+.chap:hover img{transform:scale(1.04);filter:brightness(1.08)}
+.chap .no{position:absolute;left:10px;top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;background:rgba(13,14,16,.82);padding:4px 9px;border-radius:99px;color:var(--gold)}
+.chap .read{position:absolute;right:10px;top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;background:var(--gold);color:#16120a;padding:4px 8px;border-radius:99px}
+.chap h3{font-family:var(--display);font-weight:800;font-size:18px;line-height:1.25;margin:12px 0 2px}
+.chap p{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.soon{border:1px dashed var(--line);border-radius:6px;aspect-ratio:2/3;display:grid;place-items:center;text-align:center;padding:16px;color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+footer{border-top:1px solid var(--line);color:var(--dim);font-size:13px;text-align:center;padding:28px 24px 40px}
+
+/* ---------- reader ---------- */
+.reader{position:fixed;inset:0;background:#08090a;display:flex;flex-direction:column;z-index:10}
+.bar{display:flex;align-items:center;gap:12px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));background:rgba(13,14,16,.94);border-bottom:1px solid var(--line);transition:transform .25s,opacity .25s;z-index:3}
+.reader.chrome-off .bar{transform:translateY(-100%);opacity:0;pointer-events:none}
+.reader.chrome-off .foot{transform:translateY(100%);opacity:0;pointer-events:none}
+.ib{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer;flex:none}
+.ib:hover{background:rgba(255,255,255,.06)}
+.ib svg{width:18px;height:18px}
+.ib.on{background:var(--gold);color:#16120a;border-color:var(--gold)}
+.ttl{min-width:0;flex:1}
+.ttl b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.ttl span{display:block;font-family:var(--display);font-weight:800;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.count{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+.stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none}
+.spread{display:flex;height:100%;max-width:100%;align-items:center;justify-content:center;gap:0}
+.spread img{height:100%;max-width:100%;object-fit:contain;display:block;box-shadow:0 10px 40px rgba(0,0,0,.6);background:#111}
+.spread.two img{max-width:50%}
+.spread.two img:first-child{box-shadow:-10px 10px 40px rgba(0,0,0,.6)}
+.stage.fitw .spread{height:auto;width:100%}
+.stage.fitw{overflow-y:auto;align-items:flex-start}
+.stage.fitw .spread img{height:auto;width:100%;max-width:900px}
+.turn{animation:turn .28s ease}
+.turnb{animation:turnb .28s ease}
+@keyframes turn{from{opacity:.25;transform:translateX(26px)}to{opacity:1;transform:none}}
+@keyframes turnb{from{opacity:.25;transform:translateX(-26px)}to{opacity:1;transform:none}}
+.hot{position:absolute;top:0;bottom:0;width:32%;cursor:pointer;z-index:2}
+.hot.l{left:0}.hot.r{right:0}
+.hot:hover::after{content:"";position:absolute;top:50%;width:46px;height:46px;margin-top:-23px;border-radius:50%;background:rgba(13,14,16,.6) center/18px no-repeat;border:1px solid var(--line)}
+.hot.l:hover::after{left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ece8df' stroke-width='2'%3E%3Cpath d='M15 18l-6-6 6-6'/%3E%3C/svg%3E")}
+.hot.r:hover::after{right:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ece8df' stroke-width='2'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E")}
+.scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.scroll .col{max-width:900px;margin:0 auto;padding:0 0 40px}
+.scroll img{display:block;width:100%;height:auto;aspect-ratio:2/3;background:#111;margin:0 0 6px}
+.foot{display:flex;align-items:center;gap:12px;padding:10px 14px;padding-bottom:max(10px,env(safe-area-inset-bottom));background:rgba(13,14,16,.94);border-top:1px solid var(--line);transition:transform .25s,opacity .25s;z-index:3}
+.foot input[type=range]{flex:1;accent-color:var(--gold)}
+.endcard{position:absolute;inset:0;display:grid;place-items:center;background:rgba(8,9,10,.94);z-index:4;padding:24px;text-align:center}
+.endcard .k{font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.endcard h3{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,44px);margin:10px 0 6px}
+.endcard p{color:var(--dim);margin:0 0 24px}
+.endcard .ctas{justify-content:center}
+.inline-end{max-width:900px;margin:30px auto 60px;text-align:center;padding:0 20px}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:rgba(20,21,24,.95);border:1px solid var(--line);padding:9px 16px;border-radius:99px;font-size:13px;z-index:20;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+@media (max-width:640px){
+  .hero{min-height:88vh}
+  .hero-in{padding:0 16px 40px}
+  main.home{padding:16px 16px 60px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .count{display:none}
+  .hot{width:38%}
+  .hot:hover::after{display:none}
+}
+</style>
+</head>
+<body>
+<div id="home">
+  <header class="hero">
+    <div class="hero-in">
+      <p class="kick">A seinen fantasy manga</p>
+      <h1>ASHBORN</h1>
+      <p class="sub">Voice of the Dragon</p>
+      <p class="blurb">A road warden with no past escorts a dying prisoner across a kingdom that burned its own history. The prisoner knows his face. The Steward wants them both silenced.</p>
+      <div class="ctas" id="ctas"></div>
+    </div>
+  </header>
+  <main class="home">
+    <div class="sechead"><h2>Chapters</h2><span id="chcount"></span></div>
+    <div class="grid" id="grid"></div>
+  </main>
+  <footer>Ashborn: Voice of the Dragon. Season one, updated as chapters are finished.</footer>
+</div>
+
+<div class="reader hide" id="reader" aria-live="polite">
+  <div class="bar">
+    <a class="ib" href="#/" title="All chapters" aria-label="All chapters"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></a>
+    <div class="ttl"><b id="rk"></b><span id="rt"></span></div>
+    <span class="count" id="rc"></span>
+    <button class="ib" id="bmode" title="Switch to scroll view" aria-label="Switch between page and scroll view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></button>
+    <button class="ib" id="bfit" title="Fit width" aria-label="Fit page to width"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></button>
+    <button class="ib" id="bfull" title="Full screen" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </div>
+  <div class="stage" id="stage">
+    <div class="spread" id="spread"></div>
+    <div class="hot l" id="hl" title="Previous page"></div>
+    <div class="hot r" id="hr" title="Next page"></div>
+  </div>
+  <div class="scroll hide" id="scroll"><div class="col" id="col"></div></div>
+  <div class="foot" id="foot">
+    <button class="ib" id="bprev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <input type="range" id="slider" min="1" value="1" aria-label="Page">
+    <button class="ib" id="bnext" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('ashborn:' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem('ashborn:' + k, JSON.stringify(v)); } catch (e) {} }
+  };
+  let BOOK = null, cur = null, page = 1, mode = store.get('mode', 'page'), fitw = store.get('fitw', false);
+  const src = (ch, p) => `pages/${ch.id}/p${String(p).padStart(2, '0')}.webp`;
+  const two = () => mode === 'page' && !fitw && innerWidth > innerHeight * 1.25 && innerWidth >= 1100;
+
+  function toast(t) { const el = $('toast'); el.textContent = t; el.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('show'), 1600); }
+
+  /* ---------- home ---------- */
+  function renderHome() {
+    const prog = store.get('progress', null), done = store.get('done', {});
+    const first = BOOK.chapters[0];
+    let ctas = `<a class="btn primary" href="#/${first.id}/1">Start reading <small>CH 1</small></a>`;
+    if (prog && BOOK.chapters.find(c => c.id === prog.ch)) {
+      const c = BOOK.chapters.find(c => c.id === prog.ch);
+      ctas = `<a class="btn primary" href="#/${c.id}/${prog.p}">Continue <small>CH ${c.n} · P ${prog.p}</small></a><a class="btn" href="#/${first.id}/1">From the start</a>`;
+    }
+    $('ctas').innerHTML = ctas;
+    $('chcount').textContent = `${BOOK.chapters.length} chapters · ${BOOK.chapters.reduce((a, c) => a + c.pages, 0)} pages`;
+    $('grid').innerHTML = BOOK.chapters.map(c => `
+      <a class="chap" href="#/${c.id}/1">
+        <div class="th"><img src="pages/${c.id}/thumb.webp" alt="" loading="lazy"><span class="no">CH ${String(c.n).padStart(2, '0')}</span>${done[c.id] ? '<span class="read">READ</span>' : ''}</div>
+        <h3>${esc(c.title)}</h3><p>${c.pages} PAGES</p>
+      </a>`).join('') + `<div class="soon">New chapters<br>coming soon</div>`;
+  }
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+
+  /* ---------- reader ---------- */
+  function openReader(ch, p) {
+    cur = ch; page = Math.min(Math.max(1, p), ch.pages);
+    $('home').classList.add('hide'); $('reader').classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+    $('rk').textContent = `Chapter ${ch.n}`; $('rt').textContent = ch.title;
+    document.title = `Ch ${ch.n}: ${ch.title} · Ashborn`;
+    $('slider').max = ch.pages;
+    applyMode(true);
+  }
+  function closeReader() {
+    $('reader').classList.add('hide'); $('home').classList.remove('hide');
+    document.body.style.overflow = ''; document.title = 'Ashborn: Voice of the Dragon';
+    cur = null; renderHome();
+  }
+  function applyMode(jump) {
+    $('bmode').classList.toggle('on', mode === 'scroll');
+    $('bfit').classList.toggle('on', fitw); $('bfit').classList.toggle('hide', mode === 'scroll');
+    $('stage').classList.toggle('hide', mode === 'scroll'); $('scroll').classList.toggle('hide', mode !== 'scroll');
+    $('stage').classList.toggle('fitw', fitw);
+    if (mode === 'scroll') buildScroll(jump); else show(0);
+  }
+  function show(dir) {
+    const old = $('endcard'); if (old) old.remove();
+    const sp = $('spread'), t = two() && page < cur.pages;
+    if (two() && page % 2 === 0 && page > 1) page--; // spreads start on odd pages
+    const pages = t ? [page, page + 1] : [page];
+    sp.className = 'spread' + (t ? ' two' : '') + (dir > 0 ? ' turn' : dir < 0 ? ' turnb' : '');
+    sp.innerHTML = pages.map(p => `<img src="${src(cur, p)}" alt="Chapter ${cur.n}, page ${p}" draggable="false">`).join('');
+    void sp.offsetWidth;
+    if ($('stage').classList.contains('fitw')) $('stage').scrollTop = 0;
+    const last = pages[pages.length - 1];
+    $('rc').textContent = `${pages.join('–')} / ${cur.pages}`;
+    $('slider').value = page;
+    save(last);
+    [1, 2, 3].forEach(k => { if (last + k <= cur.pages) new Image().src = src(cur, last + k); });
+    const want = `#/${cur.id}/${page}`; if (location.hash !== want) history.replaceState(null, '', want);
+  }
+  function save(last) {
+    store.set('progress', { ch: cur.id, p: page });
+    if (last >= cur.pages) { const d = store.get('done', {}); d[cur.id] = 1; store.set('done', d); }
+  }
+  function step(d) {
+    if (!cur || mode !== 'page') return;
+    const by = two() ? 2 : 1, last = page + (two() && page < cur.pages ? 1 : 0);
+    if (d > 0) {
+      if (last >= cur.pages) return endCard();
+      page = Math.min(cur.pages, page + by); show(1);
+    } else {
+      if ($('endcard')) { $('endcard').remove(); return; }
+      if (page <= 1) { const pc = prevCh(); if (pc) { toast(`Chapter ${pc.n}: ${pc.title}`); location.hash = `#/${pc.id}/${pc.pages}`; } return; }
+      page = Math.max(1, page - by); show(-1);
+    }
+  }
+  const nextCh = () => BOOK.chapters[BOOK.chapters.indexOf(cur) + 1];
+  const prevCh = () => BOOK.chapters[BOOK.chapters.indexOf(cur) - 1];
+  function endHtml() {
+    const n = nextCh();
+    return `<div class="k">End of chapter ${cur.n}</div><h3>${n ? esc(n.title) : 'To be continued'}</h3>
+      <p>${n ? `Chapter ${n.n} · ${n.pages} pages` : 'The next chapter is still being drawn.'}</p>
+      <div class="ctas">${n ? `<a class="btn primary" href="#/${n.id}/1">Read chapter ${n.n}</a>` : ''}<a class="btn" href="#/">All chapters</a></div>`;
+  }
+  function endCard() {
+    if ($('endcard')) return;
+    const el = document.createElement('div'); el.className = 'endcard'; el.id = 'endcard';
+    el.innerHTML = `<div>${endHtml()}</div>`; $('stage').appendChild(el);
+    if (nextCh()) new Image().src = src(nextCh(), 1);
+  }
+  let io = null;
+  function buildScroll(jump) {
+    const col = $('col');
+    col.innerHTML = Array.from({ length: cur.pages }, (_, i) => `<img data-p="${i + 1}" src="${src(cur, i + 1)}" alt="Chapter ${cur.n}, page ${i + 1}" loading="lazy">`).join('') + `<div class="inline-end">${endHtml()}</div>`;
+    if (io) io.disconnect();
+    io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { page = +e.target.dataset.p; $('rc').textContent = `${page} / ${cur.pages}`; $('slider').value = page; save(page); history.replaceState(null, '', `#/${cur.id}/${page}`); } });
+    }, { root: $('scroll'), rootMargin: '-45% 0px -45% 0px' });
+    col.querySelectorAll('img').forEach(i => io.observe(i));
+    if (jump) requestAnimationFrame(() => { const t = col.querySelector(`img[data-p="${page}"]`); $('scroll').scrollTop = page > 1 && t ? t.offsetTop : 0; });
+  }
+
+  /* ---------- input ---------- */
+  $('hl').onclick = () => step(-1); $('hr').onclick = () => step(1);
+  $('bprev').onclick = () => mode === 'page' ? step(-1) : scrollTo(page - 1);
+  $('bnext').onclick = () => mode === 'page' ? step(1) : scrollTo(page + 1);
+  function scrollTo(p) { p = Math.min(Math.max(1, p), cur.pages); const t = $('col').querySelector(`img[data-p="${p}"]`); if (t) $('scroll').scrollTo({ top: t.offsetTop, behavior: 'smooth' }); }
+  $('slider').oninput = e => { const p = +e.target.value; if (mode === 'page') { page = p; show(0); } else scrollTo(p); };
+  $('bmode').onclick = () => { mode = mode === 'page' ? 'scroll' : 'page'; store.set('mode', mode); toast(mode === 'page' ? 'Page view' : 'Scroll view'); applyMode(true); };
+  $('bfit').onclick = () => { fitw = !fitw; store.set('fitw', fitw); toast(fitw ? 'Fit to width' : 'Fit to screen'); applyMode(false); };
+  $('bfull').onclick = () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) {} };
+  $('stage').addEventListener('click', e => { if (e.target.closest('.hot,.endcard')) return; $('reader').classList.toggle('chrome-off'); });
+  addEventListener('keydown', e => {
+    if (!cur || e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && mode === 'page')) { e.preventDefault(); step(1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); step(-1); }
+    else if (e.key === 'Escape' && !document.fullscreenElement) location.hash = '#/';
+    else if (e.key === 'f') $('bfull').click();
+  });
+  let sx = 0, sy = 0, st = 0;
+  $('stage').addEventListener('touchstart', e => { if (e.touches.length !== 1) return; sx = e.touches[0].clientX; sy = e.touches[0].clientY; st = Date.now(); }, { passive: true });
+  $('stage').addEventListener('touchend', e => {
+    if (!st || (window.visualViewport && visualViewport.scale > 1.05)) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; st = 0;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  addEventListener('resize', () => { if (cur && mode === 'page') show(0); });
+
+  /* ---------- routing ---------- */
+  function route() {
+    const m = location.hash.match(/^#\/(ch\d+)(?:\/(\d+))?/);
+    const ch = m && BOOK.chapters.find(c => c.id === m[1]);
+    if (ch) { if (cur !== ch) openReader(ch, +(m[2] || 1)); else if (m[2] && +m[2] !== page) { page = +m[2]; mode === 'page' ? show(0) : scrollTo(page); } }
+    else if (cur) closeReader();
+    else renderHome();
+  }
+  fetch('chapters.json', { cache: 'no-cache' }).then(r => r.json()).then(b => { BOOK = b; addEventListener('hashchange', route); route(); })
+    .catch(() => { $('grid').innerHTML = '<p>Could not load the chapter list. Please refresh.</p>'; });
+})();
+</script>
+</body>
+</html>
